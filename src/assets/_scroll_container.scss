@@ -1,0 +1,23 @@
+.scroll-container {
+  width: 100%;
+  padding: var(--padding-base) var(--padding-half);
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  list-style: none;
+  gap: var(--padding-base);
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  
+  li {
+    flex: 0 0 32%;
+    max-width: 12rem;
+    scroll-snap-align: center;
+    scroll-padding: 0 var(--padding-quarter);
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+}

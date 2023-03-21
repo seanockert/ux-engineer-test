@@ -1,0 +1,63 @@
+.flex, .inline-flex {
+  align-items: center;
+  column-gap: var(--padding-base);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  row-gap: var(--padding-base);
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid, .inline-grid, .grid-half {
+  display: grid;
+  gap: var(--padding-base);
+  list-style: none;
+  padding: 0;
+}
+
+.grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));;
+  grid-template-rows: repeat(auto, auto);
+  row-gap: var(--padding-2x);
+}
+
+.inline-grid {
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.grid-half {
+  gap: var(--padding-base);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+}
+
+.stack > * + * {
+  margin-block-start: var(--padding-base);
+}
+
+.stack-2x > * + * {
+  margin-block-start: var(--padding-2x);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+}
+
+@media screen and (max-width: 60rem) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-half {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
